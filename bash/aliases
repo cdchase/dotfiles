@@ -1,0 +1,32 @@
+alias ssh="ssh -X"
+alias md="mkdir -p"
+alias rd="rmdir"
+alias df="df -h"
+alias mv="mv -i"
+alias slink="ln -s"
+alias sed='sed -E'
+alias l='ls -1'
+alias la='ls -lhAF'
+alias ll='ls -alhFG'
+alias lt="ls -alhtrFG"
+alias l.="ls -lhtrdF .*"
+alias dir="lt"
+alias dot="l."
+alias cd..="cd .."
+alias cd...="cd ../.."
+alias cd....="cd ../../.."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias xml2xsd='java -jar ~/bin/trang-20081028/trang.jar'
+
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+mkmod() {
+      mkdir "$1"
+          mkdir "$1/files" "$1/lib" "$1/manifests" "$1/templates" "$1/tests"
+}
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# misc
+alias reload='. ~/.bash_profile'

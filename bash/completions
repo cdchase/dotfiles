@@ -1,0 +1,6 @@
+export BASH=$HOME/.dotfiles/bash
+
+source $BASH/completion_scripts/git_completion
+complete -C $BASH/completion_scripts/rake_completion -o default rake
+complete -C $BASH/completion_scripts/project_completion -o default c
+complete -C $BASH/completion_scripts/capistrano_completion -o default cap

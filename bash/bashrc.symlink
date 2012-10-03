@@ -1,0 +1,11 @@
+export BASH=$HOME/.dotfiles/bash
+
+source $BASH/aliases
+source $BASH/completions
+source $BASH/paths
+source $BASH/config
+
+# use .localrc for settings specific to one system
+if [ -f ~/.localrc ]; then
+  source ~/.localrc
+fi

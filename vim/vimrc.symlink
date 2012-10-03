@@ -83,3 +83,9 @@ function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+call pathogen#infect()
+syntax enable
+set background=light
+colorscheme solarized
+
