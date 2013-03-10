@@ -26,7 +26,5 @@ mkmod() {
           mkdir "$1/files" "$1/lib" "$1/manifests" "$1/templates" "$1/tests"
 }
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # misc
 alias reload='. ~/.bash_profile'
