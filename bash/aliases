@@ -30,3 +30,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # misc
 alias reload='. ~/.bash_profile'
+alias rmds='find . -name .DS_Store -exec rm {} \;'
