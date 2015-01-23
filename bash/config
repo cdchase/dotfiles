@@ -4,7 +4,7 @@
 #export CFLAGS="-arch i386 -arch x86_64"
 export CFLAGS="-arch x86_64"
 export PYTHON_EGG_CACHE="/tmp"
-export JAVA_HOME="$(/usr/libexec/java_home)"
+#export JAVA_HOME="$(/usr/libexec/java_home)"
 
 #export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
 #export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
