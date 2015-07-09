@@ -18,3 +18,8 @@ export PYTHON_EGG_CACHE="/tmp"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# For Boot2Docker
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/chase46/.boot2docker/certs/boot2docker-vm
+
