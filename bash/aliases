@@ -20,7 +20,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias xml2xsd='java -jar ~/bin/trang-20081028/trang.jar'
 
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+# Create Puppet module template
 mkmod() {
       mkdir "$1"
           mkdir "$1/files" "$1/lib" "$1/manifests" "$1/templates" "$1/tests"
