@@ -84,8 +84,8 @@ function! StripWhitespace ()
 endfunction
 map ,s :call StripWhitespace ()<CR>
 
+" Enable pathogen for manging vim bundles & configure for solarized
 call pathogen#infect()
 syntax enable
 set background=light
 colorscheme solarized
-
