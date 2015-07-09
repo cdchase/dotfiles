@@ -1,6 +1,7 @@
 export BASH=$HOME/.dotfiles/bash
 
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+source `brew --prefix`/etc/grc.bashrc
 source $HOME/.dotfiles/git/completion.sh
 complete -C $BASH/completion_scripts/rake_completion -o default rake
 complete -C $BASH/completion_scripts/project_completion -o default c
