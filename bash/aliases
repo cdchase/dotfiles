@@ -28,3 +28,4 @@ mkmod() {
 
 # misc
 alias reload='. ~/.bash_profile'
+alias rmds='find . -name .DS_Store -exec rm {} \;'
