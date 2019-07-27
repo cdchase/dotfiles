@@ -11,11 +11,13 @@ express
 generator-ng-fullstack
 heroku
 jekyll
+json
 lodash
 mocha
 nodemon
 npm
 npm-check-updates
+ntl
 prettier
 rimraf
 sinon
