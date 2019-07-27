@@ -1,3 +1,4 @@
+export CHANGELOG_GITHUB_TOKEN="26071f20ac289794480f936724a2e714808774b3"
 #export PS1="\w$ "
 #export EDITOR="mate_wait"
 
@@ -18,7 +19,22 @@ export PYTHON_EGG_CACHE="/tmp"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# For Boot2Docker
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/chase46/.boot2docker/certs/boot2docker-vm
+# For Boot2Docker - Docker Toolbox - REMOVED
+#export DOCKER_TLS_VERIFY=1
+#export DOCKER_HOST=tcp://192.168.59.103:2376
+#export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+
+# Updated CACERT Bundle for curl
+#export CURL_CA_BUNDLE=$HOME/.dotfiles/curl/cacert.pem
+
+# Node Version Manager (nvm)
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# This loads nvm bash_completion
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+#nvm use stable
+
+# Init nodenv
+export NODE_BUILD_DEFINITIONS="/usr/local/homebrew/opt/node-build-update-defs/share/node-build"
+eval "$(nodenv init - --no-rehash)"
+

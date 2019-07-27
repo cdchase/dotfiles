@@ -20,3 +20,7 @@ compinit
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.sh) source $config_file
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/dchase/.sdkman"
+[[ -s "/Users/dchase/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dchase/.sdkman/bin/sdkman-init.sh"

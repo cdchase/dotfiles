@@ -29,3 +29,8 @@ mkmod() {
 # misc
 alias reload='. ~/.bash_profile'
 alias rmds='find . -name .DS_Store -exec rm {} \;'
+
+alias openssl1="/usr/local/Homebrew/Cellar/openssl/1.0.2o_1/bin/openssl"
+
+# Use NPM trash
+alias rm=trash

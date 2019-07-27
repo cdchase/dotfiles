@@ -1,1 +1,1 @@
-export PATH="~/.rbenv/bin:~/bin:~/.bin:/usr/local/heroku/bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/share/npm/bin:$PATH"
+export PATH="~/.rbenv/bin:~/bin:~/.bin:/opt/puppetlabs/bin:/usr/local/homebrew/opt/curl/bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/homebrew/sbin:/usr/local/sbin:$PATH"

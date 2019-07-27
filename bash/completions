@@ -1,10 +1,31 @@
 export BASH=$HOME/.dotfiles/bash
 
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
-source `brew --prefix`/etc/grc.bashrc
+#brewPrefix=`/usr/local/Homebrew/bin/brew --prefix`
+#if [ -f "${brewPrefix}/share/bash-completion/bash_completion" ]; then
+#  source "${brewPrefix}/share/bash-completion/bash_completion"
+#fi
+
+# Homebrew
+#HOMEBREW_PREFIX=$(brew --prefix)
+HOMEBREW_PREFIX=/usr/local/homebrew
+if type brew &>/dev/null; then
+  for COMPLETION in "$HOMEBREW_PREFIX"/etc/bash_completion.d/*
+  do
+    [[ -f $COMPLETION ]] && source "$COMPLETION"
+  done
+  if [[ -f ${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh ]];
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  fi
+fi
+
 source $HOME/.dotfiles/git/completion.sh
 complete -C $BASH/completion_scripts/rake_completion -o default rake
 complete -C $BASH/completion_scripts/project_completion -o default c
 complete -C $BASH/completion_scripts/capistrano_completion -o default cap
 complete -C aws_completer aws
+source $BASH/completion_scripts/wp-completion.bash
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+source "${brewPrefix}/etc/grc.bashrc"
