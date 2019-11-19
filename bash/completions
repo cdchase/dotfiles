@@ -28,4 +28,4 @@ source $BASH/completion_scripts/wp-completion.bash
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-source "${brewPrefix}/etc/grc.bashrc"
+source "${HOMEBREW_PREFIX}/etc/grc.bashrc"
