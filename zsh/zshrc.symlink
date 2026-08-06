@@ -4,6 +4,9 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Development
 
+# source homebrew before other configs
+source $ZSH/zsh/homebrew
+
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
 
@@ -19,8 +22,4 @@ autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
-for config_file ($ZSH/**/completion.sh) source $config_file
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/dchase/.sdkman"
-[[ -s "/Users/dchase/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dchase/.sdkman/bin/sdkman-init.sh"
+#for config_file ($ZSH/**/completion.sh) source $config_file

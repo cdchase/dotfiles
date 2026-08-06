@@ -46,3 +46,23 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
+
+exit_zsh() { exit }
+zle -N exit_zsh
+bindkey '^D' exit_zsh
+
+
+### Imported from Bash scripts
+
+# Exports
+export CFLAGS="-arch x86_64"
+
+# Init rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Init nodenv
+#export NODE_BUILD_DEFINITIONS="$(brew --prefix node-build-update-defs)/share/node-build" 
+#eval "$(nodenv init - --no-rehash)"
+#eval "$(nodenv init -)"
+
+#export NODENV_ROOT="${HOME}/.nodenv"

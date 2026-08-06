@@ -1,6 +1,7 @@
 export BASH=$HOME/.dotfiles/bash
 
 source $BASH/aliases
+source $BASH/homebrew
 source $BASH/completions
 source $BASH/paths
 source $BASH/config

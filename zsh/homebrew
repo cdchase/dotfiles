@@ -1,0 +1,37 @@
+# Homebrew
+
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+else
+   eval $(/usr/local/homebrew/bin/brew shellenv)
+   export HOMEBREW_CELLAR="/usr/local/Cellar";
+fi
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
+
+if [ -f "${HOMEBREW_PREFIX}/etc/grc.bashrc" ]; then
+  source "${HOMEBREW_PREFIX}/etc/grc.bashrc"
+fi
+
+export PATH="$HOME/bin:$PATH"
+
+# Add path for MongoDB tools
+export PATH="/opt/homebrew/opt/mongodb-database-tools/bin:$PATH"
+
+# Init nodenv
+export NODE_BUILD_DEFINITIONS="$(brew --prefix node-build-update-defs)/share/node-build"
+#eval "$(nodenv init - --no-rehash)"
+eval "$(nodenv init -)"
+
+export NODENV_ROOT="${HOME}/.nodenv"
+
+#export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+#export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+
+#export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@1.1/lib"
+#export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@1.1/include"
+
